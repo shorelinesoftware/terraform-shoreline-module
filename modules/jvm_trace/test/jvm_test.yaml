@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: jvm-test-ns
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: jvm-test
+  name: jvm-test
+  namespace: jvm-test-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jvm-test
+  template:
+    metadata:
+      labels:
+        app: jvm-test
+    spec:
+      nodeSelector:
+          eks.amazonaws.com/nodegroup: ng-1
+      containers:
+        - name: jvm-test-container
+          env:
+          - name: AWS_REGION
+            value: us-west-2
+          # AWS JDK image...
+          image: amazoncorretto:8
+          imagePullPolicy: IfNotPresent
+          resources:
+              requests:
+                memory: 100Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: 
+          command: ["/bin/sh"]
+          args: ["-c", "cd /tmp && yum install -y tar procps unzip wget python-setuptools && wget https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -O /tmp/awscliv2.zip && unzip /tmp/awscliv2.zip && ./aws/install && while /bin/true; do /bin/sleep 5; done"]
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 5
+
