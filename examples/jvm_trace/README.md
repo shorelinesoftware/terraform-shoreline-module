@@ -1,6 +1,6 @@
 # Shoreline JVM-Trace OpPack
 
-This folder shows config and usage examples for the [jvm-trace OpPack](https://github.com/shorelinesoftware/terraform-shoreline-modules/tree/main/modules/ijvm-trace).  For more detailed documentation, see the [shoreline docs](https://docs.shoreline.io/).
+This folder shows config and usage examples for the [jvm-trace OpPack](https://github.com/shorelinesoftware/terraform-shoreline-modules/tree/main/modules/jvm-trace).  For more detailed documentation, see the [Shoreline docs](https://docs.shoreline.io/).
 
 This OpPack monitors JVM resources (nodes/pods/containers).
 If the monitored java processes exceed the defined memory limit, 
