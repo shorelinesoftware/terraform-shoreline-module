@@ -1,16 +1,17 @@
-# terraform-shoreline-module
+# Shoreline Terraform Modules
 
-This repository is a collection of Shoreline OpPack Terraform Modules.
+This repository is a collection of Shoreline Op Pack Terraform Modules.
 
-For specific op-packs, please see one of:
+## Modules
 
-  * The "Submodules" dropdown within the Terraform Module Registry page.
-  * The [examples](https://github.com/shorelinesoftware/terraform-shoreline-modules/tree/main/examples/) subdirectory for documentation and usage examples.
-  * The [modules](https://github.com/shorelinesoftware/terraform-shoreline-modules/tree/main/modules/) subdirectory for module sources.
+| Module                                                                                                             | Examples                                                                                                      | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| [JVM Trace](https://registry.terraform.io/modules/shorelinesoftware/modules/shoreline/latest/submodules/jvm_trace) | [tomcat-to-S3](https://github.com/shorelinesoftware/terraform-shoreline-modules/tree/main/examples/jvm_trace) | Remotely pushes JVM debug data when nodes, pods, or containers exceed a defined memory threshold. |
 
+## Additional Resources
 
-For more detailed documentation on Shoreline, see:
+Find more detailed documentation on Shoreline and Terraform Op Packs below:
 
-  *  [general Shoreline docs](https://docs.shoreline.io/)
-  *  [OpPacks overview](https://docs.shoreline.io/op/packs)
-  *  [OpPacks tutorial](https://docs.shoreline.io/op/packs/tutorial)
+- [Shoreline Documentation](https://docs.shoreline.io/)
+- [Op Packs Overview](https://docs.shoreline.io/op/packs)
+- [Op Packs Tutorial](https://docs.shoreline.io/op/packs/tutorial)
