@@ -39,13 +39,6 @@
 terraform {
   # Setting 0.13.1 as the minimum version. Older versions are missing significant features.
   required_version = ">= 0.13.1"
-
-  required_providers {
-    shoreline = {
-      source  = "shorelinesoftware/shoreline"
-      version = ">= 1.1.0"
-    }
-  }
 }
 
 provider "shoreline" {
