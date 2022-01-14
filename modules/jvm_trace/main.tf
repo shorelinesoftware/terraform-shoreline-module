@@ -41,10 +41,10 @@ terraform {
   required_version = ">= 0.13.1"
 }
 
-provider "shoreline" {
-  # provider configuration here
-  retries = 2
-  debug = true
-}
+#provider "shoreline" {
+#  # provider configuration here
+#  retries = 2
+#  debug = true
+#}
 
 
